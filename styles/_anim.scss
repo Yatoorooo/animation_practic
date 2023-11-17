@@ -1,0 +1,61 @@
+.conteiner {
+  max-width: 1050px;
+  padding: 0 15px;
+  width: 100%;
+  margin: 0 auto;
+}
+.h1 {
+  color: $black;
+  font-size: 100px;
+  padding-bottom: 35px;
+}
+.row {
+  max-width: $width_row;
+
+  display: flex;
+  justify-content: space-between;
+  &:after,
+  &:before {
+    content: "";
+    width: $diamter;
+    height: $diamter;
+    display: block;
+    border-radius: 50%;
+    box-shadow: 5px 5px 12px 4px $black;
+  }
+
+  &::before {
+    background-color: red;
+    animation: left_to_right $duration  ease-in-out forwards infinite;
+  }
+  &::after {
+    background-color: blue;
+    animation: right_to_left $duration  ease-in-out forwards infinite;
+  }
+}
+
+@keyframes left_to_right {
+  100% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX($width_row - $diamter - $border * 2);
+  }
+}
+
+@keyframes right_to_left {
+  100% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(-$width_row + $diamter + $border * 2);
+  }
+}
+@for $i from 2 through 16 {
+  .row:nth-child(#{$i}) {
+    &::before,
+    &::after {
+      animation-delay: #{($i / 10) - 0.1}s;
+    }
+  }
+}

@@ -1,0 +1,168 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.conteiner {
+  max-width: 1050px;
+  padding: 0 15px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.h1 {
+  color: #000000;
+  font-size: 100px;
+  padding-bottom: 35px;
+}
+
+.row {
+  max-width: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+.row:after, .row:before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  display: block;
+  border-radius: 50%;
+  box-shadow: 5px 5px 12px 4px #000000;
+}
+.row::before {
+  background-color: red;
+  animation: left_to_right 2s ease-in-out forwards infinite;
+}
+.row::after {
+  background-color: blue;
+  animation: right_to_left 2s ease-in-out forwards infinite;
+}
+
+@keyframes left_to_right {
+  100% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(258px);
+  }
+}
+@keyframes right_to_left {
+  100% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(-258px);
+  }
+}
+.row:nth-child(2)::before, .row:nth-child(2)::after {
+  animation-delay: 0.1s;
+}
+
+.row:nth-child(3)::before, .row:nth-child(3)::after {
+  animation-delay: 0.2s;
+}
+
+.row:nth-child(4)::before, .row:nth-child(4)::after {
+  animation-delay: 0.3s;
+}
+
+.row:nth-child(5)::before, .row:nth-child(5)::after {
+  animation-delay: 0.4s;
+}
+
+.row:nth-child(6)::before, .row:nth-child(6)::after {
+  animation-delay: 0.5s;
+}
+
+.row:nth-child(7)::before, .row:nth-child(7)::after {
+  animation-delay: 0.6s;
+}
+
+.row:nth-child(8)::before, .row:nth-child(8)::after {
+  animation-delay: 0.7s;
+}
+
+.row:nth-child(9)::before, .row:nth-child(9)::after {
+  animation-delay: 0.8s;
+}
+
+.row:nth-child(10)::before, .row:nth-child(10)::after {
+  animation-delay: 0.9s;
+}
+
+.row:nth-child(11)::before, .row:nth-child(11)::after {
+  animation-delay: 1s;
+}
+
+.row:nth-child(12)::before, .row:nth-child(12)::after {
+  animation-delay: 1.1s;
+}
+
+.row:nth-child(13)::before, .row:nth-child(13)::after {
+  animation-delay: 1.2s;
+}
+
+.row:nth-child(14)::before, .row:nth-child(14)::after {
+  animation-delay: 1.3s;
+}
+
+.row:nth-child(15)::before, .row:nth-child(15)::after {
+  animation-delay: 1.4s;
+}
+
+.row:nth-child(16)::before, .row:nth-child(16)::after {
+  animation-delay: 1.5s;
+}
